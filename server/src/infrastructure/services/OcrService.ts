@@ -384,17 +384,7 @@ export class OcrService implements IOcrService {
     return "";
   }
 
-  /**
-   * Extracts mobile number from text (10-digit number)
-   */
-  private extractMobileNumber(text: string): string {
-    const mobilePattern = /\b[6-9]\d{9}\b/;
-    const matches = text.match(mobilePattern);
-    if (matches && matches.length > 0) {
-      return matches[0];
-    }
-    return "";
-  }
+
 
   /**
    * Extracts address from text - usually on back side
@@ -516,14 +506,12 @@ export class OcrService implements IOcrService {
       const gender =
         this.extractGender(frontText) || this.extractGender(combinedText);
 
-      // Extract data from back image (address, pincode, mobile number)
+      // Extract data from back image (address, pincode)
       const address =
         this.extractAddress(backText) || this.extractAddress(combinedText);
       const pincode =
         this.extractPincode(backText) || this.extractPincode(combinedText);
-      const mobileNumber =
-        this.extractMobileNumber(backText) ||
-        this.extractMobileNumber(combinedText);
+      
 
       // Extract UID from back image and compare with front
       const backUID = this.extractUID(backText);
@@ -553,7 +541,6 @@ export class OcrService implements IOcrService {
         UID: uid,
         address: address,
         pincode: pincode,
-        mobileNumber: mobileNumber,
         age_band: "", 
         IsUidSame: isUidSame,
         rawText: combinedText,

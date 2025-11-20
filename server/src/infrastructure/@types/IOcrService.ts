@@ -9,7 +9,6 @@ export interface ExtractedOcrData {
   UID: string;
   address: string;
   pincode: string;
-  mobileNumber: string;
   age_band: string;
   IsUidSame: string;
   rawText?: string;

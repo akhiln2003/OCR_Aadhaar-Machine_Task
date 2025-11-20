@@ -47,8 +47,6 @@ export class OcrController {
         address: extractedData.address,
         pincode: extractedData.pincode,
         age_band: extractedData.age_band,
-        mobileNumber: extractedData.mobileNumber,
-        maskedMobileNumber: extractedData.mobileNumber, // Keep same field name for frontend
         IsUidSame: extractedData.IsUidSame,
       };
 

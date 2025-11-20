@@ -32,7 +32,6 @@ function ParsedDataSection({ data, loading }: ParsedDataSectionProps) {
     { label: "Age Band", value: data.age_band },
     { label: "Address", value: data.address },
     { label: "Pincode", value: data.pincode },
-    { label: "Mobile Number", value: data.mobileNumber || data.maskedMobileNumber },
   ].filter((row) => Boolean(row.value));
 
   return (

@@ -9,7 +9,6 @@ export class Ocr {
     public address: string,
     public pincode: string,
     public age_band: string,
-    public mobileNumber: string,
     public IsUidSame: string,
     public rawText?: string,
     public id?: string,

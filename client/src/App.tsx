@@ -12,8 +12,6 @@ export interface AadharData {
   address: string;
   pincode: string;
   age_band: string;
-  mobileNumber?: string;
-  maskedMobileNumber?: string;
   IsUidSame: string;
 }
 

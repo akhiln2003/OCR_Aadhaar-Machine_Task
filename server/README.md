@@ -118,8 +118,6 @@ Success (200):
       "address": "Extracted Address",
       "pincode": "400706",
       "age_band": "20-30",
-      "mobileNumber": "9876543295",
-      "maskedMobileNumber": "********295",
       "IsUidSame": "UID Matched"
     }
   ],

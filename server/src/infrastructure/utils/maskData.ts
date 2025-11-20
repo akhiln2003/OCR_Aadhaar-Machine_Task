@@ -12,14 +12,6 @@ export function maskUID(uid: string): string {
   return "*".repeat(Math.max(uid.length, 12));
 }
 
-/**
- * Masks mobile number by showing only last 3 digits
- */
-export function maskMobileNumber(mobile: string): string {
-  if (!mobile || mobile.length === 0) return "";
-  if (mobile.length <= 3) return "*".repeat(mobile.length);
-  return "*".repeat(mobile.length - 3) + mobile.slice(-3);
-}
 
 /**
  * Masks address by showing only the last part (after comma or last few characters)
@@ -48,7 +40,6 @@ export interface MaskedOcrData {
   address: string;
   pincode: string;
   age_band: string;
-  maskedMobileNumber: string;
   IsUidSame: string;
 }
 
@@ -60,7 +51,6 @@ export function maskOcrData(data: {
   address: string;
   pincode: string;
   age_band: string;
-  mobileNumber: string;
   IsUidSame: string;
 }): MaskedOcrData {
   return {
@@ -71,7 +61,6 @@ export function maskOcrData(data: {
     address: maskAddress(data.address),
     pincode: data.pincode,
     age_band: data.age_band,
-    maskedMobileNumber: maskMobileNumber(data.mobileNumber),
     IsUidSame: data.IsUidSame,
   };
 }

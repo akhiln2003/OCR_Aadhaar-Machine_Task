@@ -1,6 +1,6 @@
 # OCR Aadhaar Card Parser
 
-A full-stack application for parsing Aadhaar card information using OCR (Optical Character Recognition) technology. This application allows users to upload front and back images of Aadhaar cards and automatically extracts personal information like name, DOB, gender, UID, address, pincode, and mobile number.
+A full-stack application for parsing Aadhaar card information using OCR (Optical Character Recognition) technology. This application allows users to upload front and back images of Aadhaar cards and automatically extracts personal information like name, DOB, gender, UID, address, and pincode.
 
 ## 🏗️ Project Structure
 
@@ -22,7 +22,6 @@ OCR_Aadhaar/
   - Aadhaar Number (UID)
   - Address
   - Pincode
-  - Mobile Number
   - Age Band calculation
 - ✅ Clean, modern UI with responsive design
 - ✅ Real-time OCR processing
@@ -105,7 +104,6 @@ Upload Aadhaar card images for OCR parsing.
       "address": "Extracted Address",
       "pincode": "6-digit pincode",
       "age_band": "Age range",
-      "mobileNumber": "10-digit mobile number",
       "IsUidSame": "UID Matched/Back UID Not Found"
     }
   ],
